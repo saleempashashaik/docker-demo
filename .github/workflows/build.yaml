@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Build WAR file with Maven
-        run: mvn clean package -DskipTests
+        run: ./gradlew clean build
 
       - name: Upload WAR as artifact
         uses: actions/upload-artifact@v4
